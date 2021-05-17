@@ -1,0 +1,73 @@
+*{
+  margin: 10px;
+  text-align: center;
+}
+form{
+  margin: 0;
+  box-sizing: border-box;
+}
+button{
+  color: rgb(77, 155, 197);
+  padding: 4px;
+
+}
+
+#conteo{
+  background-color: gray;
+  color:chartreuse;
+}
+#left{
+  background-color: gray;
+  color:rgb(253, 189, 144);
+}
+.todo-input{
+  width: 240px;
+}
+input{
+  outline: 0;
+  text-align-last: left;
+  padding: 4px;
+  background:rgba(0, 0, 0, 0.113);
+  border: 0;
+  padding: 7px;
+  color: rgb(96, 195, 248);
+}
+li{
+  list-style: none;
+  padding:4px;
+  display: block;
+  color: rgb(96, 195, 248);
+  /*border:1px solid rgba(96, 195, 248, 0.312); */
+  background-color: rgba(96, 165, 248, 0.072);
+  text-align: left;
+  font-family: sans-serif;
+  letter-spacing: .4px;
+}
+ul{
+  padding: 0;
+}
+.delete-button{
+  float: right;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.154);
+  outline: 0;
+  border: 0;
+  color:red;
+}
+.checked{
+  color:rgba(128, 128, 128, 0.805);
+  background-color: rgba(128, 128, 128, 0.189);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
