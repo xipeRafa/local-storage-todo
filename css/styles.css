@@ -42,6 +42,7 @@ li{
   text-align: left;
   font-family: sans-serif;
   letter-spacing: .4px;
+  text-transform: capitalize;
 }
 ul{
   padding: 0;
@@ -53,6 +54,15 @@ ul{
   outline: 0;
   border: 0;
   color:red;
+  cursor: pointer;
+}
+ .edit-button{
+  float: right;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.154);
+  outline: 0;
+  border: 0;
+  cursor: pointer;
 }
 .checked{
   color:rgba(128, 128, 128, 0.805);
