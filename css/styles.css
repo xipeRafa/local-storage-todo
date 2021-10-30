@@ -6,15 +6,28 @@ form{
   margin: 0;
   box-sizing: border-box;
 }
-button{
+button{ 
   color: rgb(77, 155, 197);
   padding: 4px;
-
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: .4px;
+}
+li button{
+  font-size: 14px;
+}
+body{
+  background-color:rgb(39, 51, 55);
+  width: 80%;
+  margin-left: 10%;
 }
 
-#conteo{
-  background-color: gray;
-  color:chartreuse;
+#completed{
+  background-color: rgba(228, 228, 188, 0.02);
+  color:rgba(128, 255, 0, 0.685);
+  padding: 10px;
+  font: 1em sans-serif;
+  letter-spacing: .6px;
 }
 #left{
   background-color: gray;
@@ -25,24 +38,26 @@ button{
 }
 input{
   outline: 0;
-  text-align-last: left;
-  padding: 4px;
+  text-align: left;
   background:rgba(0, 0, 0, 0.113);
   border: 0;
   padding: 7px;
   color: rgb(96, 195, 248);
+  font-size: 20px;
+  letter-spacing: .6px;
 }
 li{
   list-style: none;
   padding:4px;
   display: block;
   color: rgb(96, 195, 248);
-  /*border:1px solid rgba(96, 195, 248, 0.312); */
+  border:1px solid rgba(96, 195, 248, 0.312); 
   background-color: rgba(96, 165, 248, 0.072);
   text-align: left;
   font-family: sans-serif;
-  letter-spacing: .4px;
+  letter-spacing: .6px;
   text-transform: capitalize;
+  margin: 10px 0;
 }
 ul{
   padding: 0;
@@ -55,6 +70,7 @@ ul{
   border: 0;
   color:red;
   cursor: pointer;
+  padding:  4px 7px;
 }
  .edit-button{
   float: right;
@@ -62,13 +78,24 @@ ul{
   background: rgba(0, 0, 0, 0.154);
   outline: 0;
   border: 0;
+  color:rgba(255, 255, 255, 0.527);
   cursor: pointer;
+  padding:  4px 7px;
+  letter-spacing: .6px;
 }
 .checked{
   color:rgba(128, 128, 128, 0.805);
   background-color: rgba(128, 128, 128, 0.189);
+  border:1px solid rgba(128, 128, 128, 0.189); 
+  text-decoration: line-through;
 }
-
+[type='checkbox']{
+  cursor: pointer;
+  margin: 10px 0px;
+}
+[type="text"]{
+  width: 50%;
+}
 
 
 
