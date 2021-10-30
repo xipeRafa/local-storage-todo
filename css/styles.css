@@ -8,10 +8,13 @@ form{
 }
 button{ 
   color: rgb(77, 155, 197);
-  padding: 4px;
+  padding: 4px 8px;
   cursor: pointer;
   font-size: 20px;
   letter-spacing: .4px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.837);
 }
 li button{
   font-size: 14px;
@@ -84,10 +87,9 @@ ul{
   letter-spacing: .6px;
 }
 .checked{
-  color:rgba(128, 128, 128, 0.805);
-  background-color: rgba(128, 128, 128, 0.189);
+  color:rgba(128, 128, 128, 1);
+  background-color: rgba(128, 128, 128, 0.08);
   border:1px solid rgba(128, 128, 128, 0.189); 
-  text-decoration: line-through;
 }
 [type='checkbox']{
   cursor: pointer;

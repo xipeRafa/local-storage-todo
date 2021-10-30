@@ -8,11 +8,19 @@ const completed = document.querySelector('#completed')
 let todos = [];
 let edit = false
 let editID
+
 function completedTrue(){
   const c = todos.filter(el => el.completed === true).length
   completed.textContent = c + ` Completed of ${todos.length}`
 } 
 
+
+function buttonCustom(msg){
+  addButton.textContent = msg
+  setTimeout(() => {
+    addButton.textContent = 'Add Item'
+  }, 2000);
+}
 
 todoForm.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -24,10 +32,7 @@ function addTodo(item) {
   if(edit){
     todos.forEach(el => el.id == editID ? el.name = todoInput.value : el) 
     addToLocalStorage(todos) 
-    addButton.textContent = 'Edited successfully'
-    setTimeout(() => {
-      addButton.textContent = 'Add Item'
-    }, 3000);
+    buttonCustom('Edited successfully')
     edit = false
   }else{
 
@@ -35,15 +40,15 @@ function addTodo(item) {
       const todo = { id: Date.now(), name: item, completed: false };
       todos.push(todo);
       addToLocalStorage(todos)
-      addButton.textContent = 'Added Great!!'
-      setTimeout(() => {
-        addButton.textContent = 'Add Item'
-      }, 3000);
+      buttonCustom('Added Great!!')
+    }else{
+      buttonCustom('Type AnyThing...')
     }
 
   }
   todoInput.value = '';
   completedTrue()
+  todoInput.focus()
 }
 
 function renderTodos(todos) {
@@ -96,12 +101,14 @@ function toggle(id) {
   addToLocalStorage(todos)
   console.log(todos)
   completedTrue()
+  todoInput.focus()
 }
 
 function deleteTodo(id) {
   todos = todos.filter(item => item.id != id)
   addToLocalStorage(todos);
   completedTrue()
+  todoInput.focus()
 }
 
 function editTodo(id){
@@ -110,6 +117,7 @@ function editTodo(id){
   todoInput.value = editName
   edit = true
   sendEditId(id)
+  todoInput.focus()
 }
 
 function sendEditId(id){
@@ -117,8 +125,6 @@ function sendEditId(id){
 }
 
 getFromLocalStorage();
-
-
 
 todoItemsList.addEventListener('click', function(event) {
   if (event.target.type === 'checkbox') {
